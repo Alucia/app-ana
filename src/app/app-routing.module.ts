@@ -8,6 +8,10 @@ const routes: Routes = [
     loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
   },
   {
+    path: 'list-user',
+    loadChildren: () => import('./user/user.module').then(mod => mod.UserModule)
+  },
+  {
     path: '',
     redirectTo: '',
     pathMatch: 'full'

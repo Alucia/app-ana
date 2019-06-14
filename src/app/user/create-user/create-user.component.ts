@@ -6,7 +6,6 @@ import { UserService, User } from '../user.service';
   selector: 'app-create-user',
   templateUrl: './create-user.component.html',
   styleUrls: ['./create-user.component.scss'],
-  providers: [UserService],
 })
 export class CreateUserComponent {
 

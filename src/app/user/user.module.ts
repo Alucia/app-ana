@@ -2,6 +2,7 @@ import { NgModule, Optional, SkipSelf, ModuleWithProviders } from '@angular/core
 import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { ListUserComponent } from './list-user/list-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { User } from './user.service';
 
@@ -11,7 +12,7 @@ import { User } from './user.service';
     UserRoutingModule,
     ReactiveFormsModule
   ],
-  declarations: [CreateUserComponent]
+  declarations: [CreateUserComponent, ListUserComponent]
 })
 export class UserModule {
   constructor(@Optional() @SkipSelf() parentModule: UserModule) {
