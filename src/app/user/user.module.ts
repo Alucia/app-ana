@@ -1,18 +1,22 @@
 import { NgModule, Optional, SkipSelf, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
-import { CreateUserComponent } from './create-user/create-user.component';
-import { ListUserComponent } from './list-user/list-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CreateUserModule } from './create-user/create-user.module';
+import { ListUserModule } from './list-user/list-user.module';
 import { User } from './user.service';
+import { UserComponent } from './user.component';
 
 @NgModule({
   imports: [
     CommonModule,
     UserRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CreateUserModule,
+    ListUserModule,
   ],
-  declarations: [CreateUserComponent, ListUserComponent]
+  declarations: [UserComponent],
+  exports: [UserComponent]
 })
 export class UserModule {
   constructor(@Optional() @SkipSelf() parentModule: UserModule) {
