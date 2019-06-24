@@ -1,23 +1,26 @@
 <form [formGroup]="userForm">
-  <label>Name:
+  <div class="group">
+    <label>Name:</label>
     <input type="text" placeholder="Name" formControlName="nameControl">
-  </label>
-  <p class="error"
-    *ngIf="showError && !userForm.controls['nameControl'].valid">Este campo es requerido</p>
-  <br>
-  <label>Last Name:
-    <input type="text" placeholder="Last Name" formControlName="lastNameControl">
-  </label>
-  <p class="error"
-    *ngIf="showError && !userForm.controls['lastNameControl'].valid">Este campo es requerido</p>
-  <br>
-  <label>Email:
-    <input type="text" placeholder="Email" formControlName="emailControl">
-  </label>
-  <br>
-</form>
-<button class="btn btn-default" (click)="save()">Save</button>
+    <p class="error"
+      *ngIf="showError && !userForm.controls['nameControl'].valid">
+      Este campo es requerido
+    </p>
+  </div>
 
-<ul>
-  <li *ngFor="let user of users">{{user.name}}</li>
-</ul>
+  <div class="group">
+    <label>Last Name:</label>
+    <input type="text" placeholder="Last Name" formControlName="lastNameControl">
+    <p class="error"
+      *ngIf="showError && !userForm.controls['lastNameControl'].valid">
+      Este campo es requerido
+    </p>
+  </div>
+
+  <div class="group">
+    <label>Email:</label>
+    <input type="text" placeholder="Email" formControlName="emailControl">
+  </div>
+</form>
+
+<button class="btn btn-default" (click)="save()">Save</button>

@@ -9,15 +9,7 @@ const routes: Routes = [
   {
     path: 'user',
     component: UserComponent,
-  },
-  {
-    path: 'create-user',
-    component: CreateUserComponent,
-  },
-  {
-    path: 'list-user',
-    component: ListUserComponent,
-  },
+  }
 ];
 
 @NgModule({
